@@ -1,103 +1,239 @@
+"use client";
 import Image from "next/image";
+import SkillTag from "./components/SkillTag";
+import { Icon } from "@iconify/react";
+import Project from "./components/Project";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css";
+import React, { use, useRef, useState } from "react";
+import Navbar from "./components/navbar";
+import ExpereinceTag from "./components/ExperienceTag";
+import { useIsVisible } from "./components/useIsVisible";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => setDarkMode(!darkMode);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const ref1 = useRef();
+  const isVisisble1 = useIsVisible(ref1);
+
+  const ref2 = useRef();
+  const isVisisble2 = useIsVisible(ref2);
+
+  const ref3 = useRef();
+  const isVisisble3 = useIsVisible(ref3);
+
+  const ref4 = useRef();
+  const isVisisble4 = useIsVisible(ref4);
+  return (
+    <div
+      className={`content-center ${darkMode ? "dark" : ""} ${
+        darkMode ? "bg-[#002C61]" : "#fffcf1"
+      }`}
+    >
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <div
+        className={`pl-28 pr-28 pt-20 transition-opacity ease-in duration-700 ${
+          isVisisble1 ? "opacity-100" : "opacity-0"
+        }`}
+        id="About"
+        ref={ref1}
+      >
+        <div className="grid grid-cols-1 mt-28 gap-0 justify-center  md:grid-cols-2 lg:grid-cols-2">
+          <Image
+            width={542}
+            height={514}
+            src="/images/myPic.jpg"
+            className="rounded-3xl sm:"
+            alt="SRR."
+          />
+          <div className="grid grid-flow-row auto-rows-max gap-4">
+            <h1 className="text-[48px] sm:text-[48px] md:text-[60px] lg:text-[100px] leading-none">
+              I'm Saranrat.
+            </h1>
+            <h3 className="m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none">
+              UX/UI designer and developer.
+            </h3>
+            <div className="">
+              <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            <button className="button items-start">Resume</button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className={`mt-28 mb-20 transition-opacity ease-in duration-700 ${
+            isVisisble2 ? "opacity-100" : "opacity-0"
+          }`}
+          ref={ref2}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px] mb-20">
+            Skills.
+          </h2>
+
+          {/* <div className="grid grid-rows-2 ml-20 mr-20"> */}
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 p-0">
+            <div className="">
+              <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
+                UX/UI Design
+              </h4>
+            </div>
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </p>
+            <div className="col-start-2 flex flex-wrap ">
+              <SkillTag iconSrc="/icons/figma.svg" label="Figma" />
+              <SkillTag iconSrc="/icons/photoshop.svg" label="Photoshop" />
+            </div>
+          </div>
+          <div className="grid grid-cols-[350px_auto] gap-2 mt-20">
+            <div className="">
+              <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
+                Web Development
+              </h4>
+            </div>
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </p>
+            <div className="col-start-2 flex flex-wrap items-center space-x-2">
+              <SkillTag
+                iconSrc="/icons/vscode.svg"
+                label="Visual Studio Code"
+              />
+              <SkillTag iconSrc="/icons/javascript.svg" label="Javascript" />
+              <SkillTag iconSrc="/icons/react.svg" label="React" />
+              <SkillTag iconSrc="/icons/html.svg" label="HTML" />
+              <SkillTag iconSrc="/icons/css.svg" label="CSS" />
+              <SkillTag iconSrc="/icons/tailwind.svg" label="Tailwind" />
+              <SkillTag iconSrc="/icons/postman.svg" label="Postman" />
+              <SkillTag iconSrc="/icons/flutter.svg" label="Flutter" />
+            </div>
+          </div>
+        </div>
+        <div
+          className={`mt-28 mb-20 transition-opacity ease-in duration-700 ${
+            isVisisble3 ? "opacity-100" : "opacity-0"
+          }`}
+          id="Project"
+          ref={ref3}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px] mb-10">
+            Projects.
+          </h2>
+          <div className="max-w-[90%] mx-auto overflow-visible justify-center pb-10">
+            <Swiper
+              effect="coverflow"
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 150,
+                modifier: 2,
+                slideShadows: false,
+              }}
+              navigation={true}
+              pagination={true}
+              centeredSlides={true}
+              slidesPerView={1.3}
+              loop={true}
+              modules={[EffectCoverflow, Navigation, Pagination]}
+            >
+              <SwiperSlide className="flex justify-center items-center py-8">
+                <div className="h-full">
+                  <Project
+                    ProjectName="ModLifes."
+                    ProjDesc="Website to make life in university more convinince for KMUTT student"
+                    ProjectImg="/images/modLifes.png"
+                    ProjLabel="ModLifes"
+                    href="/modLifes"
+                    width={749}
+                    height={421}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Project
+                  ProjectName="ModSport."
+                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjectImg="/images/modSport.png"
+                  ProjLabel="ModSport"
+                  href="/modSport"
+                  width={550}
+                  height={464}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Project
+                  ProjectName="PayStation."
+                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjectImg="/images/PayStation.png"
+                  ProjLabel="ModLifes"
+                  href="/PayStation"
+                  width={520}
+                  height={385}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Project
+                  ProjectName="HealJai."
+                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjectImg="/images/HealJai.png"
+                  ProjLabel="ModLifes"
+                  href="/HealJai"
+                  width={722}
+                  height={462}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Project
+                  ProjectName="Mari."
+                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjectImg="/images/Mari.png"
+                  ProjLabel="ModLifes"
+                  href="/Mari"
+                  width={600}
+                  height={400}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        <div
+          className={`mt-28 mb-20 transition-opacity ease-in duration-700 ${
+            isVisisble4 ? "opacity-100" : "opacity-0"
+          }`}
+          id="Experience"
+          ref={ref4}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px]">
+            Expereinces.
+          </h2>
+          <div className="grid grid-cols-[350px_auto] gap-2 mt-20">
+            <div className="">
+              <h5 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
+                2024
+              </h5>
+            </div>
+            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+              Bunnag Industrial Technologies and Software Co., Ltd.
+            </p>
+            <div></div>
+            <div className="flex">
+              <ExpereinceTag label="June-August" />
+              <ExpereinceTag label="Full-Stack Developer" />
+              <ExpereinceTag label="UX/UI Designer" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
