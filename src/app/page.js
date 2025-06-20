@@ -53,7 +53,7 @@ export default function Home() {
           />
           <div className="grid grid-flow-row auto-rows-max gap-4">
             <h1 className="text-[48px] sm:text-[48px] md:text-[60px] lg:text-[100px] leading-none">
-              I'm Saranrat.
+              I&apos;m Saranrat.
             </h1>
             <h3 className="m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none">
               UX/UI designer and developer.
