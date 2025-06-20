@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import React, { use, useRef, useState } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import ExpereinceTag from "./components/ExperienceTag";
 import { useIsVisible } from "./components/useIsVisible";
 
