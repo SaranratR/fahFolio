@@ -60,14 +60,13 @@ export default function Home() {
             </h3>
             <div className="">
               <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet.
               </p>
             </div>
 
-            <button className="button w-[162px] h-[35px] md: w-[237px] md:h-[64px] items-start text-[18px] md:text-[22px]">Resume</button>
+            <button className="button w-[162px] h-[35px] md: w-[237px] md:h-[64px] items-start text-[18px] md:text-[22px]">
+              Resume
+            </button>
           </div>
         </div>
         <div
@@ -81,41 +80,46 @@ export default function Home() {
           </h2>
 
           {/* <div className="grid grid-rows-2 ml-20 mr-20"> */}
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 p-0">
-            <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-2 p-0">
+            <div>
               <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 UX/UI Design
               </h4>
             </div>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </p>
-            <div className="col-start-2 flex flex-wrap ">
-              <SkillTag iconSrc="/icons/figma.svg" label="Figma" />
-              <SkillTag iconSrc="/icons/photoshop.svg" label="Photoshop" />
+            <div>
+              <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+              <div className="flex flex-wrap mt-2 gap-2">
+                <SkillTag iconSrc="/icons/figma.svg" label="Figma" />
+                <SkillTag iconSrc="/icons/photoshop.svg" label="Photoshop" />
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
-            <div className="">
+
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-2 mt-20 p-0">
+            <div>
               <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 Web Development
               </h4>
             </div>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            </p>
-            <div className="col-start-2 flex flex-wrap items-center space-x-2">
-              <SkillTag
-                iconSrc="/icons/vscode.svg"
-                label="Visual Studio Code"
-              />
-              <SkillTag iconSrc="/icons/javascript.svg" label="Javascript" />
-              <SkillTag iconSrc="/icons/react.svg" label="React" />
-              <SkillTag iconSrc="/icons/html.svg" label="HTML" />
-              <SkillTag iconSrc="/icons/css.svg" label="CSS" />
-              <SkillTag iconSrc="/icons/tailwind.svg" label="Tailwind" />
-              <SkillTag iconSrc="/icons/postman.svg" label="Postman" />
-              <SkillTag iconSrc="/icons/flutter.svg" label="Flutter" />
+            <div>
+              <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+              <div className="col-start-2 flex flex-wrap items-center space-x-2 space-y-2 mt-2">
+                <SkillTag
+                  iconSrc="/icons/vscode.svg"
+                  label="Visual Studio Code"
+                />
+                <SkillTag iconSrc="/icons/javascript.svg" label="Javascript" />
+                <SkillTag iconSrc="/icons/react.svg" label="React" />
+                <SkillTag iconSrc="/icons/html.svg" label="HTML" />
+                <SkillTag iconSrc="/icons/css.svg" label="CSS" />
+                <SkillTag iconSrc="/icons/tailwind.svg" label="Tailwind" />
+                <SkillTag iconSrc="/icons/postman.svg" label="Postman" />
+                <SkillTag iconSrc="/icons/flutter.svg" label="Flutter" />
+              </div>
             </div>
           </div>
         </div>
@@ -217,19 +221,29 @@ export default function Home() {
             Expereinces.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
-            <div className="">
+            <div>
               <h5 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 2024
               </h5>
             </div>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
-              Bunnag Industrial Technologies and Software Co., Ltd.
-            </p>
-            <div></div>
-            <div className="flex">
-              <ExpereinceTag label="June-August" />
-              <ExpereinceTag label="Full-Stack Developer" />
-              <ExpereinceTag label="UX/UI Designer" />
+            <div>
+              <h5 className="text-[24px] md:text-[30px] lg:text-[32px] italic font-medium leading-none">
+                Bunnag Industrial Technologies and Software Co., Ltd.
+              </h5>
+
+              <div className="col-start-2 flex flex-wrap gap-2 mt-4">
+                <ExpereinceTag label="June-August" />
+                <ExpereinceTag label="Full-Stack Developer" />
+                <ExpereinceTag label="UX/UI Designer" />
+              </div>
+              <div className="col-start-2 flex flex-wrap gap-2 mt-4">
+                <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
             </div>
           </div>
         </div>
