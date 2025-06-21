@@ -27,10 +27,10 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           : "bg-transparent"
       }`}
     >
-      <div className="flex justify-between items-center mt-10 px-20">
+      <div className="flex justify-between items-center mt-10 px-10 md:px-20">
         <div className="flex-shrink-0">
-          <Image
-            src="/fahFolio.png"
+          <Image 
+            src={darkMode ? "/images/fahfoliodark.png" : "/images/fahfoliolight.png"}
             width={80}
             height={80}
             alt="Logo"
@@ -71,7 +71,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full md:hidden bg-[#fffcf1] dark:bg-[#002C61] w-full px-6 pb-4 space-y-4">
+          <div className={`absolute top-full left-0 w-full md:hidden ${darkMode ? "bg-[#002C61]" : "bg-[#fffcf1]"}  w-full px-6 pb-4 space-y-4`}>
             <a href="#About" className="block font-code">
               About
             </a>

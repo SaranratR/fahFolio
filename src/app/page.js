@@ -37,7 +37,7 @@ export default function Home() {
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div
-        className={`pl-20 md:pl-28 pr-20 md:pr-28 pt-20 transition-opacity ease-in duration-700 ${
+        className={`pl-10 md:pl-28 pr-10 md:pr-28 pt-20 transition-opacity ease-in duration-700 ${
           isVisisble1 ? "opacity-100" : "opacity-0"
         }`}
         id="About"
@@ -52,7 +52,7 @@ export default function Home() {
             alt="SRR."
           />
           <div className="grid grid-flow-row auto-rows-max gap-4">
-            <h1 className="text-6xl sm:text-[36px] md:text-6xl lg:text-[100px] leading-none">
+            <h1 className="text-[38px] pt-4 md:p-0 md:text-6xl lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
             <h3 className="m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none">
@@ -76,7 +76,7 @@ export default function Home() {
           }`}
           ref={ref2}
         >
-          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px] mb-20">
+          <h2 className="text-center text-[40px] md:text-[60px] lg:text-[100px] mb-20">
             Skills.
           </h2>
 
@@ -126,7 +126,7 @@ export default function Home() {
           id="Project"
           ref={ref3}
         >
-          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px] mb-10">
+          <h2 className="text-center text-[40px] md:text-[60px] lg:text-[100px] mb-10">
             Projects.
           </h2>
           <div className="max-w-[90%] mx-auto overflow-visible justify-center pb-10">
@@ -213,7 +213,7 @@ export default function Home() {
           id="Experience"
           ref={ref4}
         >
-          <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px]">
+          <h2 className="text-center text-[40px] md:text-[60px] lg:text-[100px]">
             Expereinces.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
