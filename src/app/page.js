@@ -37,7 +37,7 @@ export default function Home() {
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div
-        className={`pl-28 pr-28 pt-20 transition-opacity ease-in duration-700 ${
+        className={`pl-20 md:pl-28 pr-20 md:pr-28 pt-20 transition-opacity ease-in duration-700 ${
           isVisisble1 ? "opacity-100" : "opacity-0"
         }`}
         id="About"
@@ -52,7 +52,7 @@ export default function Home() {
             alt="SRR."
           />
           <div className="grid grid-flow-row auto-rows-max gap-4">
-            <h1 className="text-[48px] sm:text-[48px] md:text-[60px] lg:text-[100px] leading-none">
+            <h1 className="text-6xl sm:text-[36px] md:text-6xl lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
             <h3 className="m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none">
@@ -67,7 +67,7 @@ export default function Home() {
               </p>
             </div>
 
-            <button className="button items-start">Resume</button>
+            <button className="button w-[162px] h-[35px] md: w-[237px] md:h-[64px] items-start text-[18px] md:text-[22px]">Resume</button>
           </div>
         </div>
         <div
@@ -95,7 +95,7 @@ export default function Home() {
               <SkillTag iconSrc="/icons/photoshop.svg" label="Photoshop" />
             </div>
           </div>
-          <div className="grid grid-cols-[350px_auto] gap-2 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
             <div className="">
               <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 Web Development
@@ -216,7 +216,7 @@ export default function Home() {
           <h2 className="text-center text-[48px] md:text-[60px] lg:text-[100px]">
             Expereinces.
           </h2>
-          <div className="grid grid-cols-[350px_auto] gap-2 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
             <div className="">
               <h5 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 2024
