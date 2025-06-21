@@ -209,7 +209,7 @@ export default function Home() {
                 <Project
                   ProjectName="ModSport."
                   ProjDesc="Website to make life in university more convinince for KMUTT student"
-                  ProjectImg="/images/modSport.png"
+                  ProjectImg="/images/ModSport.png"
                   ProjLabel="ModSport"
                   href="/modSport"
                   width={550}
@@ -278,9 +278,12 @@ export default function Home() {
               </h5>
 
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
-                <ExpereinceTag label="June-August" />
-                <ExpereinceTag label="Full-Stack Developer" />
-                <ExpereinceTag label="UX/UI Designer" />
+                <ExpereinceTag darkMode={darkMode} label="June-August" />
+                <ExpereinceTag
+                  darkMode={darkMode}
+                  label="Full-Stack Developer"
+                />
+                <ExpereinceTag darkMode={darkMode} label="UX/UI Designer" />
               </div>
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
                 <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">

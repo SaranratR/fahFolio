@@ -84,7 +84,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
         {isMenuOpen && (
           <div
-            className={`absolute top-full left- w-full md:hidden ${
+            className={`absolute top-full left-0 w-full md:hidden ${
               darkMode ? "bg-[#002C61]" : "bg-[#fffcf1]"
             }  w-full px-6 pb-4 space-y-4`}
           >
