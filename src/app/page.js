@@ -43,7 +43,7 @@ export default function Home() {
         id="About"
         ref={ref1}
       >
-        <div className="grid grid-cols-1 mt-28 gap-0 justify-center  md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 mt-28 gap-0 justify-center md:grid-cols-2 lg:grid-cols-2 ">
           <Image
             width={542}
             height={514}
@@ -51,7 +51,7 @@ export default function Home() {
             className="rounded-3xl sm:"
             alt="SRR."
           />
-          <div className="grid grid-flow-row auto-rows-max gap-4">
+          <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6">
             <h1 className="text-[38px] pt-4 md:p-0 md:text-6xl lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
@@ -184,12 +184,34 @@ export default function Home() {
                 modifier: 2,
                 slideShadows: false,
               }}
-              navigation={true}
+              // navigation
               pagination={true}
               centeredSlides={true}
-              slidesPerView={1.3}
+              // slidesPerView={1.3}
               loop={true}
               modules={[EffectCoverflow, Navigation, Pagination]}
+              breakpoints={{
+                0: {
+                  // Phones (portrait & small screens)
+                  slidesPerView: 1,
+                  navigation: false, // Hide arrows on small screens
+                },
+                640: {
+                  // iPads / Tablets (in portrait)
+                  slidesPerView: 1,
+                  navigation: false,
+                },
+                768: {
+                  // iPads / Tablets (landscape)
+                  slidesPerView: 1.3,
+                  navigation: true,
+                },
+                1024: {
+                  // Computers / Desktops
+                  slidesPerView: 1.3,
+                  navigation: true,
+                },
+              }}
             >
               <SwiperSlide className="flex justify-center items-center py-8">
                 <div className="h-full">
