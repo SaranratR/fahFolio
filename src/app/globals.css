@@ -19,15 +19,6 @@
   --color-accent: #d8e0ff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #c3d6e9;
-    --color-text: #d6e8ff;
-    --color-secondary: #85bcff;
-    --color-bg: #002c61;
-    --color-accent: #d8e0ff;
-  }
-}
 
 a {
   font-family: "Inter", sans-serif;
@@ -78,6 +69,11 @@ h5 {
   font-weight: 300;
   font-style: italic;
   color: var(--color-primary);
+}
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #034ca0;
 }
 p {
   font-family: "Inter", sans-serif;

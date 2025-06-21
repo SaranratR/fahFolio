@@ -55,7 +55,11 @@ export default function Home() {
             <h1 className="text-[38px] pt-4 md:p-0 md:text-6xl lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
-            <h3 className="m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none">
+            <h3
+              className={`${
+                darkMode ? "text-[#C3D6E9]" : "text-[#034CA0]"
+              }m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none`}
+            >
               UX/UI designer and developer.
             </h3>
             <div className="">
@@ -197,6 +201,7 @@ export default function Home() {
                     href="/modLifes"
                     width={749}
                     height={421}
+                    darkMode={darkMode}
                   />
                 </div>
               </SwiperSlide>
@@ -209,6 +214,7 @@ export default function Home() {
                   href="/modSport"
                   width={550}
                   height={464}
+                  darkMode={darkMode}
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -220,6 +226,7 @@ export default function Home() {
                   href="/PayStation"
                   width={520}
                   height={385}
+                  darkMode={darkMode}
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -231,6 +238,7 @@ export default function Home() {
                   href="/HealJai"
                   width={722}
                   height={462}
+                  darkMode={darkMode}
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -242,6 +250,7 @@ export default function Home() {
                   href="/Mari"
                   width={600}
                   height={400}
+                  darkMode={darkMode}
                 />
               </SwiperSlide>
             </Swiper>
