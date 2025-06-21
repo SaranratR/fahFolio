@@ -91,8 +91,16 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               </p>
               <div className="flex flex-wrap mt-2 gap-2">
-                <SkillTag iconSrc="/icons/figma.svg" label="Figma" />
-                <SkillTag iconSrc="/icons/photoshop.svg" label="Photoshop" />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/figma.svg"
+                  label="Figma"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/photoshop.svg"
+                  label="Photoshop"
+                />
               </div>
             </div>
           </div>
@@ -109,22 +117,51 @@ export default function Home() {
               </p>
               <div className="col-start-2 flex flex-wrap items-center space-x-2 space-y-2 mt-2">
                 <SkillTag
+                  darkMode={darkMode}
                   iconSrc="/icons/vscode.svg"
                   label="Visual Studio Code"
                 />
-                <SkillTag iconSrc="/icons/javascript.svg" label="Javascript" />
-                <SkillTag iconSrc="/icons/react.svg" label="React" />
-                <SkillTag iconSrc="/icons/html.svg" label="HTML" />
-                <SkillTag iconSrc="/icons/css.svg" label="CSS" />
-                <SkillTag iconSrc="/icons/tailwind.svg" label="Tailwind" />
-                <SkillTag iconSrc="/icons/postman.svg" label="Postman" />
-                <SkillTag iconSrc="/icons/flutter.svg" label="Flutter" />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/javascript.svg"
+                  label="Javascript"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/react.svg"
+                  label="React"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/html.svg"
+                  label="HTML"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/css.svg"
+                  label="CSS"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/tailwind.svg"
+                  label="Tailwind"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/postman.svg"
+                  label="Postman"
+                />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/flutter.svg"
+                  label="Flutter"
+                />
               </div>
             </div>
           </div>
         </div>
         <div
-          className={`mt-28 mb-20 transition-opacity ease-in duration-700 ${
+          className={`-mx-10 mt-28 mb-20 transition-opacity ease-in duration-700 ${
             isVisisble3 ? "opacity-100" : "opacity-0"
           }`}
           id="Project"
@@ -223,7 +260,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
             <div>
               <h5 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
-                2024
+                2024;
               </h5>
             </div>
             <div>

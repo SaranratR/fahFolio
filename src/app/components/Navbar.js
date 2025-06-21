@@ -63,7 +63,15 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             className="block md:hidden"
           >
             <Image
-              src={isMenuOpen ? "/icons/MenuClose.svg" : "/icons/menuOpen.svg"}
+              src={
+                isMenuOpen
+                  ? darkMode
+                    ? "/icons/menuOpendark.svg"
+                    : "/icons/menuOpen.svg"
+                  : darkMode
+                  ? "/icons/menuClosedark.svg"
+                  : "/icons/menuClose.svg"
+              }
               alt="Menu Toggle"
               width={19}
               height={19}
