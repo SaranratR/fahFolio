@@ -84,15 +84,18 @@ export default function Home() {
           </h2>
 
           {/* <div className="grid grid-rows-2 ml-20 mr-20"> */}
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-2 p-0">
+          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-6 md:gap-2 p-0">
             <div>
-              <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
+              <h4 className="text-center md:text-start text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 UX/UI Design
               </h4>
             </div>
             <div>
-              <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              <p className="text-[18px] indent-8 md:indent-0 md:text-[20px] lg:text-[24px] text-justify leading-none">
+                I design intuitive, user-centered interfaces that prioritize
+                accessibility and seamless interaction. My design process
+                includes wireframing, prototyping, and user testing to ensure a
+                smooth and enjoyable experience across devices.
               </p>
               <div className="flex flex-wrap mt-2 gap-2">
                 <SkillTag
@@ -117,7 +120,9 @@ export default function Home() {
             </div>
             <div>
               <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                I build responsive and accessible web applications using modern
+                front-end technologies. I write clean, maintainable code and
+                follow best practices in both design and development.
               </p>
               <div className="col-start-2 flex flex-wrap items-center space-x-2 space-y-2 mt-2">
                 <SkillTag
