@@ -51,8 +51,8 @@ export default function Home() {
             className="rounded-3xl sm:"
             alt="SRR."
           />
-          <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6">
-            <h1 className="text-[38px] pt-4 md:p-0 md:text-6xl lg:text-[100px] leading-none">
+          <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6 lg:ml-0">
+            <h1 className="text-[38px] pt-4 md:p-0 md:text-[50px] lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
             <h3

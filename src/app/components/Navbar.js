@@ -88,22 +88,22 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               darkMode ? "bg-[#002C61]" : "bg-[#fffcf1]"
             }  w-full px-6 pb-4 space-y-4`}
           >
-            <a href="#About" className="block font-code">
+            <a href="#About" className="block font-code text-center">
               About
             </a>
-            <a href="#Project" className="block font-code">
+            <a href="#Project" className="block font-code text-center">
               Projects
             </a>
-            <a href="#Experience" className="block font-code">
+            <a href="#Experience" className="block font-code text-center">
               Experience
             </a>
-            <a href="#Contact" className="block font-code">
+            <a href="#Contact" className="block font-code text-center">
               Contact
             </a>
             <button onClick={toggleDarkMode}>
               <Icon
                 icon={darkMode ? "solar:sun-bold" : "solar:moon-bold"}
-                className="w-5 h-5"
+                className="w-5 h-5 flex items-center justify-center"
                 color={darkMode ? "#D6E8FF" : "#034ca0"}
               />
             </button>
