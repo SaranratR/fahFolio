@@ -16,6 +16,7 @@ import { useIsVisible } from "./components/useIsVisible";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showMore, setShowMore] = useState(false);
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   const ref1 = useRef();
@@ -62,6 +63,7 @@ export default function Home() {
             >
               UX/UI designer and developer.
             </h3>
+            <p className="font-extralight">Based Bangkok, Thailand.</p>
             <div className="">
               <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
                 Lorem ipsum dolor sit amet.
@@ -219,14 +221,10 @@ export default function Home() {
                   slidesPerView: 1.02,
                   navigation: true,
                 },
-                1180: {
-                  // iPads / Tablets (landscape)
-                  slidesPerView: 1.05,
-                  navigation: true,
-                },
+
                 1024: {
                   // Computers / Desktops
-                  slidesPerView: 1.3,
+                  slidesPerView: 1.5,
                   navigation: true,
                 },
               }}
@@ -321,15 +319,65 @@ export default function Home() {
                 <ExpereinceTag darkMode={darkMode} label="June-August" />
                 <ExpereinceTag darkMode={darkMode} label="UX/UI Designer" />
                 <ExpereinceTag darkMode={darkMode} label="Software Engineer" />
-                <ExpereinceTag darkMode={darkMode} label="Tester"/>
+                <ExpereinceTag darkMode={darkMode} label="Tester" />
               </div>
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
                 <p className="text-[16px] md:text-[18px] lg:text-[20px] text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Developed the BBBChess learning platform with features for
+                  course creation and role-based access. Contributed to UI
+                  design, frontend/backend integration, testing, and AWS image
+                  handling in an Agile team.
                 </p>
+                {showMore && (
+                  <ul className="list-disc pl-10 mt-2 text-[15px] md:text-[16px] lg:text-[18px] font-light space-y-2 text-justify">
+                    <li>
+                      Designed user interfaces for company and BBBChess websites
+                      using Figma and MUI with responsive layouts.
+                    </li>
+                    <li>
+                      Developed frontend features in TypeScript, implementing
+                      course creation, editing, and display functionality.
+                    </li>
+                    <li>
+                      Built and connected backend APIs using GraphQL, Apollo
+                      Server, and MySQL Workbench.
+                    </li>
+                    <li>
+                      Integrated frontend and backend using custom React hooks
+                      for chapter and course management.
+                    </li>
+                    <li>
+                      Tested UI components with Vitest, simulating user
+                      interactions and ensuring functionality across edge cases.
+                    </li>
+                    <li>
+                      Managed image uploads with AWS S3, gaining hands-on
+                      experience with cloud-based storage solutions.
+                    </li>
+                    <li>
+                      Worked in Agile (SCRUM) sprints using GitHub Projects and
+                      participated in daily stand-ups and biweekly demos.
+                    </li>
+                  </ul>
+                )}
+                <button
+                  onClick={() => setShowMore(!showMore)}
+                  className="mt-2 text-[##186ccf] hover:underline italic"
+                >
+                  {showMore ? "Show Less" : "Show More"}
+                </button>
+                {/* <p className="text-[16px] md:text-[18px] lg:text-[20px] text-justify">
+                  During my summer internship at Bunnag Industrial Technologies
+                  and Software Co., Ltd., I worked as a UX/UI Designer, Software
+                  Engineer, and Tester on the BBBChess platform. I designed user
+                  interfaces using Figma and MUI, developed front-end features
+                  with TypeScript, and implemented GraphQL APIs for backend
+                  integration. I also tested components using Vitest and managed
+                  image uploads to AWS S3. The internship improved my coding
+                  skills, teamwork, and understanding of the software
+                  development lifecycle through Agile (SCRUM) practices and
+                  regular sprint planning on GitHub.
+                </p> */}
               </div>
             </div>
           </div>
@@ -343,7 +391,7 @@ export default function Home() {
         >
           <p
             className={`text-[14px] md:text-[18px] lg:text-[20px] font-extralight ${
-              darkMode ? "" : "text-[#FFFCF1]"
+              darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"
             }`}
           >
             © 2025 Saranrat Roteaim. All rights reserved.
@@ -352,7 +400,7 @@ export default function Home() {
             <a
               href="mailto:saranrat.rote@outlook.com"
               target="_blank"
-              className="text-[#FFFCF1]"
+              className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
               rel="noopener noreferrer"
             >
               <Icon icon="ic:baseline-alternate-email" />
@@ -360,17 +408,20 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/saranrat-roteaim"
               target="_blank"
-              className="text-[#FFFCF1]"
+              className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
             >
               <Icon icon="mdi:linkedin" />
             </a>
             {/* <a
               href="https://www.behance.net/saranratroteaim"
-              className="text-[#FFFCF1]"
+              className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
             >
               <Icon icon="ri:behance-fill" />
             </a> */}
-            <a href="https://github.com/SaranratR" className="text-[#FFFCF1]">
+            <a
+              href="https://github.com/SaranratR"
+              className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
+            >
               <Icon icon="mdi:github" />
             </a>
           </div>
