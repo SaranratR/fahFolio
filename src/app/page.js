@@ -51,7 +51,7 @@ export default function Home() {
             className="rounded-3xl sm:"
             alt="SRR."
           />
-          <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6 lg:ml-0">
+          <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6 lg:ml-4">
             <h1 className="text-[42px] pt-4 md:p-0 md:text-[44px] tablet:text-[50px] lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
@@ -219,6 +219,11 @@ export default function Home() {
                   slidesPerView: 1.02,
                   navigation: true,
                 },
+                1180: {
+                  // iPads / Tablets (landscape)
+                  slidesPerView: 1.05,
+                  navigation: true,
+                },
                 1024: {
                   // Computers / Desktops
                   slidesPerView: 1.3,
@@ -314,11 +319,9 @@ export default function Home() {
 
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
                 <ExpereinceTag darkMode={darkMode} label="June-August" />
-                <ExpereinceTag
-                  darkMode={darkMode}
-                  label="Full-Stack Developer"
-                />
                 <ExpereinceTag darkMode={darkMode} label="UX/UI Designer" />
+                <ExpereinceTag darkMode={darkMode} label="Software Engineer" />
+                <ExpereinceTag darkMode={darkMode} label="Tester"/>
               </div>
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
                 <p className="text-[16px] md:text-[18px] lg:text-[20px] text-justify">
@@ -331,36 +334,47 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <div
-            className={`-mx-10 md:-mx-28 flex justify-between ${
-              darkMode ? "bg-[#D6E8FF]" : "bg-[#034ca0]"
-            } w-full h-[130px]`}
+        <footer
+          className={`-mx-10 md:-mx-20 lg:-mx-28 px-10 py-4 flex justify-between items-center ${
+            darkMode
+              ? "bg-[#D6E8FF] text-[#034CA0]"
+              : "bg-[#034ca0] text-[#FFFCF1]"
+          }`}
+        >
+          <p
+            className={`text-[14px] md:text-[18px] lg:text-[20px] font-extralight ${
+              darkMode ? "" : "text-[#FFFCF1]"
+            }`}
           >
-            <p
-              className={`text-[14px] md:text-[18px] lg:text-[20px] ${
-                darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"
-              }`}
+            © 2025 Saranrat Roteaim. All rights reserved.
+          </p>
+          <div className="justify-end flex flex-end gap-2">
+            <a
+              href="mailto:saranrat.rote@outlook.com"
+              target="_blank"
+              className="text-[#FFFCF1]"
+              rel="noopener noreferrer"
             >
-              Email: saranrat.rote@outlook.com
-            </p>
-            <div className="justify-end flex flex-end">
-              <a
-                href="https://www.linkedin.com/in/saranrat-roteaim"
-                target="_blank"
-                className="text-[##FFFCF1]"
-              >
-                <Icon icon="mdi:linkedin" />
-              </a>
-              <a href="https://www.behance.net/saranratroteaim">
-                <Icon icon="ri:behance-fill" />
-              </a>
-              <a href="https://github.com/SaranratR">
-                <Icon icon="mdi:github" />
-              </a>
-            </div>
+              <Icon icon="ic:baseline-alternate-email" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saranrat-roteaim"
+              target="_blank"
+              className="text-[#FFFCF1]"
+            >
+              <Icon icon="mdi:linkedin" />
+            </a>
+            {/* <a
+              href="https://www.behance.net/saranratroteaim"
+              className="text-[#FFFCF1]"
+            >
+              <Icon icon="ri:behance-fill" />
+            </a> */}
+            <a href="https://github.com/SaranratR" className="text-[#FFFCF1]">
+              <Icon icon="mdi:github" />
+            </a>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
