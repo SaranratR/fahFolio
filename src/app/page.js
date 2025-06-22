@@ -329,7 +329,11 @@ export default function Home() {
                   handling in an Agile team.
                 </p>
                 {showMore && (
-                  <ul className="list-disc pl-10 mt-2 text-[15px] md:text-[16px] lg:text-[18px] font-light space-y-2 text-justify">
+                  <ul
+                    className={`list-disc pl-10 mt-2 text-[15px] md:text-[16px] lg:text-[18px] font-light space-y-2 text-justify ${
+                      darkMode ? "text-[#d6e8ff]" : "text-[#186ccf]"
+                    }`}
+                  >
                     <li>
                       Designed user interfaces for company and BBBChess websites
                       using Figma and MUI with responsive layouts.
@@ -362,7 +366,9 @@ export default function Home() {
                 )}
                 <button
                   onClick={() => setShowMore(!showMore)}
-                  className="mt-2 text-[##186ccf] hover:underline italic"
+                  className={`mt-2 ${
+                    darkMode ? "text-[#d6e8ff]" : "text-[#186ccf]"
+                  } hover:underline italic`}
                 >
                   {showMore ? "Show Less" : "Show More"}
                 </button>
