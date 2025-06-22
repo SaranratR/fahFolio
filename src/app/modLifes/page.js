@@ -19,6 +19,12 @@ export default function ModLifes() {
         for the schedule module, which allows students to create their own
         timetables, incorporating events or other activities.
       </p>
+      {/* <h4 className={`text-center`}>Features</h4>
+      <div>
+        
+      </div>
+      <h4 className={`text-center`}>Technology Stack</h4> */}
+
       <div className="flex justify-center">
         <Image
           src="/images/modLifes.png"

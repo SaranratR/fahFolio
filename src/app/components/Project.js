@@ -23,12 +23,12 @@ export default function Project({
       onClick={handleClick}
       className={`${
         darkMode ? "bg-[#D6E8FF]" : "bg-[#F4F4F4]"
-      } w-[335px] h-[400px] sm:w-[550px] sm:h-[530px] md:w-[606px] md:h-[550px] lg:w-[871px] lg:h-[592px] p-10 rounded-xl shadow-xl`}
+      } w-[335px] h-[400px] sm:w-[550px] sm:h-[530px] md:w-[550px] md:h-[550px] lg:w-[871px] lg:h-[592px] p-10 rounded-xl shadow-xl`}
     >
       <div className="flex flex-col items-center gap-2">
         <h6 className={` text-[36px] md:text-[42px]`}>{ProjectName}</h6>
         <p
-          className={`${
+          className={`text-center ${
             darkMode ? "text-[#034ca0]" : "bg-[#F4F4F4]"
           } text-[15px] md:text-[16px] lg:text-[20px]`}
         >

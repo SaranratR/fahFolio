@@ -37,7 +37,7 @@ export default function Home() {
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div
-        className={`pl-10 md:pl-28 pr-10 md:pr-28 pt-20 transition-opacity ease-in duration-700 ${
+        className={`pl-10 md:pl-20 lg:pl-28 pr-10 md:pr-20 lg:pr-28 pt-20 transition-opacity ease-in duration-700 ${
           isVisisble1 ? "opacity-100" : "opacity-0"
         }`}
         id="About"
@@ -52,13 +52,13 @@ export default function Home() {
             alt="SRR."
           />
           <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6 lg:ml-0">
-            <h1 className="text-[42px] pt-4 md:p-0 md:text-[50px] lg:text-[100px] leading-none">
+            <h1 className="text-[42px] pt-4 md:p-0 md:text-[44px] tablet:text-[50px] lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
             <h3
               className={`${
                 darkMode ? "text-[#C3D6E9]" : "text-[#034CA0]"
-              }m-0 p-0 text-[34px] md:text-[36px] lg:text-[42px] leading-none`}
+              }m-0 p-0 text-[32px] md:text-[34px] tablet:text-[36px] lg:text-[42px] leading-none`}
             >
               UX/UI designer and developer.
             </h3>
@@ -84,7 +84,7 @@ export default function Home() {
           </h2>
 
           {/* <div className="grid grid-rows-2 ml-20 mr-20"> */}
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-6 md:gap-2 p-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[350px_auto] gap-6 md:gap-2 p-0">
             <div>
               <h4 className="text-center md:text-start text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 UX/UI Design
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-2 mt-20 p-0">
+          <div className="grid grid-cols-1  lg:grid-cols-[350px_auto] gap-2 mt-20 p-0">
             <div>
               <h4 className="text-center md:text-start text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 Web Development
@@ -198,8 +198,16 @@ export default function Home() {
               breakpoints={{
                 0: {
                   // Phones (portrait & small screens)
-                  slidesPerView: 1,
+                  slidesPerView: 1.01,
                   navigation: false, // Hide arrows on small screens
+                },
+                390: {
+                  slidesPerView: 1.05,
+                  navigation: false,
+                },
+                430: {
+                  slidesPerView: 1.13,
+                  navigation: false,
                 },
                 640: {
                   // iPads / Tablets (in portrait)
@@ -208,7 +216,7 @@ export default function Home() {
                 },
                 768: {
                   // iPads / Tablets (landscape)
-                  slidesPerView: 1.04,
+                  slidesPerView: 1.02,
                   navigation: true,
                 },
                 1024: {
@@ -235,7 +243,7 @@ export default function Home() {
               <SwiperSlide>
                 <Project
                   ProjectName="ModSport."
-                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjDesc="Application that let students and staff effortlessly find and book campus stadium facilities anytime, anywhere."
                   ProjectImg="/images/ModSport.png"
                   ProjLabel="ModSport"
                   href="/modSport"
@@ -247,7 +255,7 @@ export default function Home() {
               <SwiperSlide>
                 <Project
                   ProjectName="PayStation."
-                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjDesc="Shop smarter at KMUTT Book Store with an app that detects your items and checks you out in seconds — no waiting, no hassle."
                   ProjectImg="/images/PayStation.png"
                   ProjLabel="ModLifes"
                   href="/PayStation"
@@ -259,7 +267,7 @@ export default function Home() {
               <SwiperSlide>
                 <Project
                   ProjectName="HealJai."
-                  ProjDesc="Website to make life in university more convinince for KMUTT student"
+                  ProjDesc="Your mental health matters — connect anonymously with psychiatrists and get support anytime with this easy, awareness-driven platform."
                   ProjectImg="/images/HealJai.png"
                   ProjLabel="ModLifes"
                   href="/HealJai"
@@ -293,7 +301,7 @@ export default function Home() {
           <h2 className="text-center text-[40px] md:text-[60px] lg:text-[100px]">
             Expereinces.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[350px_auto] lg:grid-cols-[350px_auto] gap-2 mt-20">
             <div>
               <h5 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 2024;
@@ -324,15 +332,23 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div className="flex">
-            <p className="text-[14px] md:text-[18px] lg:text-[20px]">
+          <div
+            className={`-mx-10 md:-mx-28 flex justify-between ${
+              darkMode ? "bg-[#D6E8FF]" : "bg-[#034ca0]"
+            } w-full h-[130px]`}
+          >
+            <p
+              className={`text-[14px] md:text-[18px] lg:text-[20px] ${
+                darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"
+              }`}
+            >
               Email: saranrat.rote@outlook.com
             </p>
             <div className="justify-end flex flex-end">
               <a
                 href="https://www.linkedin.com/in/saranrat-roteaim"
                 target="_blank"
-                rel="noopener noreferrer"
+                className="text-[##FFFCF1]"
               >
                 <Icon icon="mdi:linkedin" />
               </a>
@@ -341,9 +357,6 @@ export default function Home() {
               </a>
               <a href="https://github.com/SaranratR">
                 <Icon icon="mdi:github" />
-              </a>
-              <a href="https://www.instagram.com/fah.hello/">
-                <Icon icon="mdi:instagram" />
               </a>
             </div>
           </div>
