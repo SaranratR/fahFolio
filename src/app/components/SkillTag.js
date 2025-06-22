@@ -10,7 +10,7 @@ export default function SkillTag({ darkMode, iconSrc, label }) {
     >
       <Image src={iconSrc} alt={label} width={20} height={20} />
       <span
-        className={`text-[16px] md:text-[22px] ${
+        className={`text-[14px] md:text-[16px] lg:text-[18px] ${
           darkMode ? "text-[#d6e8ff]" : "text-[#186CCF]"
         }`}
       >

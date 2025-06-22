@@ -13,7 +13,7 @@ export default function ModLifes() {
         <RoleTag label="UX/UI Designer" />
         <RoleTag label="Frontend Developer" />
       </div>
-      <p className="text-[18px] md:text-[20px] lg:text-[24px] indent-8 text-justify p-10">
+      <p className="text-[16px] md:text-[18px] lg:text-[20px] indent-8 text-justify p-10">
         A website designed to simplify the lives of KMUTT students with numerous
         features, including schedules, airdrop, and more. My team is responsible
         for the schedule module, which allows students to create their own

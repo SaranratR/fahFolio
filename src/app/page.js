@@ -52,13 +52,13 @@ export default function Home() {
             alt="SRR."
           />
           <div className="grid grid-flow-row auto-rows-max gap-4 md:ml-6 lg:ml-0">
-            <h1 className="text-[38px] pt-4 md:p-0 md:text-[50px] lg:text-[100px] leading-none">
+            <h1 className="text-[42px] pt-4 md:p-0 md:text-[50px] lg:text-[100px] leading-none">
               I&apos;m Saranrat.
             </h1>
             <h3
               className={`${
                 darkMode ? "text-[#C3D6E9]" : "text-[#034CA0]"
-              }m-0 p-0 text-[36px] md:text-[40px] lg:text-[42px] leading-none`}
+              }m-0 p-0 text-[34px] md:text-[36px] lg:text-[42px] leading-none`}
             >
               UX/UI designer and developer.
             </h3>
@@ -91,7 +91,7 @@ export default function Home() {
               </h4>
             </div>
             <div>
-              <p className="text-[18px] indent-8 md:indent-0 md:text-[20px] lg:text-[24px] text-justify leading-none">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] text-justify leading-none indent-8 md:indent-0">
                 I design intuitive, user-centered interfaces that prioritize
                 accessibility and seamless interaction. My design process
                 includes wireframing, prototyping, and user testing to ensure a
@@ -114,12 +114,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-[350px_auto] gap-2 mt-20 p-0">
             <div>
-              <h4 className="text-[28px] md:text-[30px] lg:text-[32px] leading-none">
+              <h4 className="text-center md:text-start text-[28px] md:text-[30px] lg:text-[32px] leading-none">
                 Web Development
               </h4>
             </div>
             <div>
-              <p className="text-[18px] md:text-[20px] lg:text-[24px] leading-none">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-none indent-8 md:indent-0 text-justify">
                 I build responsive and accessible web applications using modern
                 front-end technologies. I write clean, maintainable code and
                 follow best practices in both design and development.
@@ -203,12 +203,12 @@ export default function Home() {
                 },
                 640: {
                   // iPads / Tablets (in portrait)
-                  slidesPerView: 1,
+                  slidesPerView: 0.8,
                   navigation: false,
                 },
                 768: {
                   // iPads / Tablets (landscape)
-                  slidesPerView: 1.3,
+                  slidesPerView: 1.04,
                   navigation: true,
                 },
                 1024: {
@@ -313,13 +313,38 @@ export default function Home() {
                 <ExpereinceTag darkMode={darkMode} label="UX/UI Designer" />
               </div>
               <div className="col-start-2 flex flex-wrap gap-2 mt-4">
-                <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
+                <p className="text-[16px] md:text-[18px] lg:text-[20px] text-justify">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex">
+            <p className="text-[14px] md:text-[18px] lg:text-[20px]">
+              Email: saranrat.rote@outlook.com
+            </p>
+            <div className="justify-end flex flex-end">
+              <a
+                href="https://www.linkedin.com/in/saranrat-roteaim"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon icon="mdi:linkedin" />
+              </a>
+              <a href="https://www.behance.net/saranratroteaim">
+                <Icon icon="ri:behance-fill" />
+              </a>
+              <a href="https://github.com/SaranratR">
+                <Icon icon="mdi:github" />
+              </a>
+              <a href="https://www.instagram.com/fah.hello/">
+                <Icon icon="mdi:instagram" />
+              </a>
             </div>
           </div>
         </div>
