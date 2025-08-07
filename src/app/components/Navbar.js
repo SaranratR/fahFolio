@@ -88,16 +88,32 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               darkMode ? "bg-[#002C61]" : "bg-[#fffcf1]"
             }  w-full px-6 pb-4 space-y-4`}
           >
-            <a href="#About" className="block font-code text-center">
+            <a
+              href="#About"
+              onClick={() => setIsMenuOpen(false)}
+              className="block font-code text-center"
+            >
               About
             </a>
-            <a href="#Project" className="block font-code text-center">
+            <a
+              href="#Project"
+              onClick={() => setIsMenuOpen(false)}
+              className="block font-code text-center"
+            >
               Projects
             </a>
-            <a href="#Experience" className="block font-code text-center">
+            <a
+              href="#Experience"
+              onClick={() => setIsMenuOpen(false)}
+              className="block font-code text-center"
+            >
               Experience
             </a>
-            <a href="#Contact" className="block font-code text-center">
+            <a
+              href="#Contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="block font-code text-center"
+            >
               Contact
             </a>
             <button onClick={toggleDarkMode}>
