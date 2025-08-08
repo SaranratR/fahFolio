@@ -41,9 +41,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             className="ml-4"
           />
         </div>
-        <div
-          className={`hidden md:flex px-8 py-2 rounded-full flex space-x-10 justify-center`}
-        >
+        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 px-8 py-2 rounded-full space-x-10">
           <a className="font-code" href="#About">
             About
           </a>

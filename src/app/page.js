@@ -13,11 +13,11 @@ import React, { use, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import ExpereinceTag from "./components/ExperienceTag";
 import { useIsVisible } from "./components/useIsVisible";
+import { useDarkMode } from "./context/DarkModeContext";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
   const [showMore, setShowMore] = useState(false);
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   const ref1 = useRef();
   const isVisisble1 = useIsVisible(ref1);
@@ -64,13 +64,23 @@ export default function Home() {
               UX/UI designer and developer.
             </h3>
             <p className="font-extralight">Based Bangkok, Thailand.</p>
-            <div className="">
+            {/* <div className="">
               <p className="text-[18px] md:text-[20px] lg:text-[24px] text-justify">
                 Lorem ipsum dolor sit amet.
               </p>
-            </div>
+            </div> */}
 
-            <button className="button w-[162px] h-[35px] md: w-[237px] md:h-[64px] items-start text-[18px] md:text-[22px]">
+            <button
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Saranrat_resume.pdf";
+                link.download = "Saranrat_Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="button w-[162px] h-[35px] md:w-[237px] md:h-[64px] items-start text-[18px] md:text-[22px]"
+            >
               Resume
             </button>
           </div>
@@ -167,6 +177,11 @@ export default function Home() {
                   iconSrc="/icons/flutter.svg"
                   label="Flutter"
                 />
+                <SkillTag
+                  darkMode={darkMode}
+                  iconSrc="/icons/firebase.svg"
+                  label="Firebase"
+                />
               </div>
             </div>
           </div>
@@ -229,7 +244,7 @@ export default function Home() {
                 },
               }}
             >
-              <SwiperSlide className="flex justify-center items-center py-8">
+              {/* <SwiperSlide className="flex justify-center items-center py-8">
                 <div className="h-full">
                   <Project
                     ProjectName="ModLifes."
@@ -242,14 +257,14 @@ export default function Home() {
                     darkMode={darkMode}
                   />
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <Project
                   ProjectName="ModSport."
                   ProjDesc="Application that let students and staff effortlessly find and book campus stadium facilities anytime, anywhere."
                   ProjectImg="/images/ModSport.png"
                   ProjLabel="ModSport"
-                  href="/modSport"
+                  href={`/modSport?darkMode=${darkMode}`}
                   width={550}
                   height={464}
                   darkMode={darkMode}
@@ -261,7 +276,7 @@ export default function Home() {
                   ProjDesc="Shop smarter at KMUTT Book Store with an app that detects your items and checks you out in seconds — no waiting, no hassle."
                   ProjectImg="/images/PayStation.png"
                   ProjLabel="ModLifes"
-                  href="/PayStation"
+                  href={`/PayStation?darkMode=${darkMode}`}
                   width={520}
                   height={385}
                   darkMode={darkMode}
@@ -273,7 +288,7 @@ export default function Home() {
                   ProjDesc="Your mental health matters — connect anonymously with psychiatrists and get support anytime with this easy, awareness-driven platform."
                   ProjectImg="/images/HealJai.png"
                   ProjLabel="ModLifes"
-                  href="/HealJai"
+                  href={`/HealJai?darkMode=${darkMode}`}
                   width={722}
                   height={462}
                   darkMode={darkMode}
@@ -285,7 +300,7 @@ export default function Home() {
                   ProjDesc="Website to make life in university more convinince for KMUTT student"
                   ProjectImg="/images/Mari.png"
                   ProjLabel="ModLifes"
-                  href="/Mari"
+                  href={`/Mari?darkMode=${darkMode}`}
                   width={600}
                   height={400}
                   darkMode={darkMode}
@@ -404,7 +419,7 @@ export default function Home() {
           </p>
           <div className="justify-end flex flex-end gap-2">
             <a
-              href="mailto:saranrat.rote@outlook.com"
+              href="mailto:saranrat.rote@gmail.com"
               target="_blank"
               className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
               rel="noopener noreferrer"
@@ -418,12 +433,12 @@ export default function Home() {
             >
               <Icon icon="mdi:linkedin" />
             </a>
-            {/* <a
-              href="https://www.behance.net/saranratroteaim"
+            <a
+              href="https://www.behance.net/SaranratR"
               className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
             >
               <Icon icon="ri:behance-fill" />
-            </a> */}
+            </a>
             <a
               href="https://github.com/SaranratR"
               className={`${darkMode ? "text-[#034CA0]" : "text-[#FFFCF1]"}`}
