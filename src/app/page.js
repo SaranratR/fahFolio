@@ -77,7 +77,7 @@ export default function Home() {
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = "/Saranrat_resume.pdf";
-                link.download = "Saranrat_Resume.pdf";
+                link.download = "Saranrat_resume.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
