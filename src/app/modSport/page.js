@@ -114,7 +114,7 @@ export default function ModSport() {
             />
             <SkillTag
               darkMode={darkMode}
-              iconSrc="/icons/Firebase.svg"
+              iconSrc="/icons/firebase.svg"
               label="Firebase"
             />
           </div>
