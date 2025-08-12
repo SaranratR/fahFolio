@@ -30,6 +30,9 @@ export default function Home() {
 
   const ref4 = useRef();
   const isVisisble4 = useIsVisible(ref4);
+
+  const ref5 = useRef();
+  const isVisisble5 = useIsVisible(ref4);
   return (
     <div
       className={`content-center ${darkMode ? "dark" : ""} ${
@@ -404,11 +407,13 @@ export default function Home() {
           </div>
         </div>
         <footer
+          id="Contact"
           className={`-mx-10 md:-mx-20 lg:-mx-28 px-10 py-4 flex justify-between items-center ${
             darkMode
               ? "bg-[#D6E8FF] text-[#034CA0]"
               : "bg-[#034ca0] text-[#FFFCF1]"
-          }`}
+          } ${isVisisble5 ? "opacity-100" : "opacity-0"}`}
+          ref={ref5}
         >
           <p
             className={`text-[14px] md:text-[18px] lg:text-[20px] font-extralight ${
